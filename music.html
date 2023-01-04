@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title></title>
+</head>
+<body>
+
+	<!-- our strategy for doing different things on every-other click:a
+	1. Count the clicks and store themm in a variable
+	2. if a click is even do one thing
+	3. if a click is odd then do another thing -->
+<script type="text/javascript">
+	let counter=0;
+
+	document.addEventListener("click",
+		function(){
+	counter= counter+1
+			console.log(counter)
+
+			if (counter%2==0){
+				document.body.style.
+			backgroundColor="red"}
+
+			if(counter%2==1){
+		document.body.style.
+		backgroundColor="green"
+
+			}
+		}
+		)
+
+</script>
+</body>
+</html>

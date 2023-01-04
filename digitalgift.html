@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+	<title>happy birthday!</title>
+
+	<style type="text/css">
+		
+		#photo{
+	height: 200px;
+	width: 200px;
+	background-image: url();
+	background-size:contain;
+	background-repeat: no-repeat;
+
+}
+
+#second-zphoto{
+height: 200px;
+	width: 200px;
+	background-image: url(fried_egg.png);
+	background-size:contain;
+	background-repeat: no-repeat;
+}
+
+/*#photo{
+background-image: url();
+}*/
+
+	</style>
+
+
+<body>
+<div id="photo"></div>
+
+<div id="second-photo"></div>
+
+<audio id="song" src="fryingeggagain.m4a" ></audio>
+
+<script type="text/javascript">
+
+var clickCounter = 0;
+
+photo.addEventListener(
+		"click", function(){
+
+	clickCounter = clickCounter + 1
+
+if(clickCounter%2 == 0) {
+console.log(clickCounter);
+song.pause()
+photo.style.backgroundImage = "url(gudetama.png)"
+	}
+
+
+if(clickCounter%2 == 1) {
+console.log(clickCounter);
+photo.style.backgroundImage = "url(fried_egg.png)"
+song.play()
+
+		} //end of second if statement//
+
+	});//end of function and end of event listener
+		
+</script>
+
+</body>
+</html>

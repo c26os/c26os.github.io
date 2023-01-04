@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title></title>
+<style type="text/css">
+	
+	#clouds{
+	height:1000px;
+	width:1500px;
+	background-image:url(cloudy_sky.png);
+	background-size:contain;
+	background-repeat: no-repeat;
+	position: fixed; 
+	margin-left: initial;
+	
+}
+#textbox{
+height: 100px;
+width: 100px;
+font-family: courier new;
+color: yellow;
+position: sticky;
+
+
+}
+
+</style>
+</head>
+
+
+<body>
+	<h1 class="textbox">here comes the sun</h1>
+	
+
+<div id=textbox></div>
+<div id="sun"></div>
+<div id="clouds"></div>
+<audio id=""></audio>
+
+<script type="text/javascript">
+	var counter=0
+	document.addEventListener ("click",
+		function(){
+			counter=counter+1
+			if(counter%2==0)
+				{song.pause()
+			photo.style.backgroundImage="url(-)"
+
+		}
+		if(counter%2==1)
+			{song.play();
+		photo.style.backgroundImage="url(c)"
+
+
+	}
+
+
+
+
+		})
+</script>
+</body>
+</html>

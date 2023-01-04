@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title>stars</title>
+</head>
+<style type="text/css">
+#momo{
+	height: 200px;
+	width: 200px;
+	background-image: url(momo.jpg);s
+	background-size:contain;
+	background-repeat: no-repeat;
+	position: absolute; 
+}
+background-image url: momo.png;
+
+</style>
+
+
+<body>
+<div id="momo"></div>
+<script type="text/javascript">
+document.addEventListener("click", function makeMomo(event){
+
+console.log(event.clientX, event.clientY);
+momo.style.left= event.clientX - 100+ "px";
+momo.style.top=event.clientY - 100+"px" ;
+//momo.style.backgroundImage="ur
+	})
+
+</script>
+
+</body>
+</html>
+
+
+

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title></title>
+	<style type="text/css">
+
+		.momo{
+		width:100px;
+		height:100px;
+		background-image:url(momo.png);
+		background-size:cover;
+		display:inline-block;
+		}
+
+		.momo:hover{
+			background-color:blueviolet;
+		}
+	</style>
+</head>
+<body>
+	<script type="text/javascript">
+
+		function DoSomething () {
+			let momo = document.createElement("div")
+			document.body.appendChild(momo);
+			momo.classList.add("momo")
+		}
+
+	setInterval(DoSomething, 100)
+
+</script>
+
+</body>
+</html>
