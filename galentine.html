@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title></title>
+<style type="text/css">
+	#picture{
+/*		top:-12px;*/
+	width:100%;
+	height:1000px;
+	background-position:center;
+	backgroun d-color: hotpink;
+	background-image:url(galentine.png);
+	background-size: cover;
+	z-index: 0;
+	position:fixed;
+	background-repeat: no-repeat;
+	
+	}
+
+#happy{
+background-color: red;
+width: 200px;
+height: ;
+}
+
+	body{
+		margin:0px;
+	}
+
+.hearts{
+width:100px;
+height:80px;
+display:inline-block;
+z-index:1;
+margin:0px;
+font-size:0px;
+background-image:url(heartdiv.png);
+background-size: contain;
+background-position:center;
+background-repeat:no-repeat;
+}
+
+.morehearts{
+width:100px;
+height:100px;
+display:inline-block;
+z-index: 1;
+font-size:0px;
+background-image:url(heartdiv.png);
+background-size: cover;	
+
+}
+
+
+	</style>
+
+</head>
+<body>
+	<div id="picture"></div>
+
+
+
+<script type="text/javascript">
+	function  makeHeart(){
+	var heart =document.createElement("div");
+	document.getElementById("picture").appendChild(heart);
+	heart.classList.add("hearts");
+	heart.addEventListener("mouseover", function (){
+		heart.style.opacity=0;
+	})
+
+
+}
+
+for(var i=1;i<309;i=i+1)
+	{makeHeart()}
+
+
+
+</script>
+
+</body>
+</html>
+
+<!-- steps 
+set picture of friends as z-index:0; or background image
+make a bunch of heart divs (with z-index:1)
+addEventListener for hover over heart-shape divs
+change z-index to 0 upon hover- therefore revealing image -->

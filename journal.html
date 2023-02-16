@@ -7,7 +7,7 @@
 
 #menu{
 height: 900px;
-width: 20% ;
+width: 200px;
 background-color:black;
 position: fixed;
 font-size: 40px;
@@ -15,7 +15,7 @@ z-index: 1;
 }
 
 body {
-  margin: 10px;
+  margin: 0px;
 }
 
 section{
@@ -24,74 +24,81 @@ background-color:darkblue;
 opacity: 0.5;
 border: dotted;
 width: 100%;
-height:800px;
-position: absolute;
 font-size: 40px;
 font-color:black;
 }
 
 #first-page{
-top: 0%;
 z-index: 0;}
 
 #second-page{
-top: 800px;}
+}
 
 #third-page{
-top: 1600px;}
+}
 
 #fourth-page{
-top: 2400px;}
+}
 
-#text-box{
-width:80%;
+#parent-div {
+	display: flex;
+	flex-direction: column;
+	margin-left: 200px;
+}
+
+.text-box{
+
 background-color: blanchedalmond;
-position:relative;
 left:20%;
-padding:10px;}
+padding:10px;
+margin-bottom:40px;}
 
 </style>
 </head>
 <body>
 
 	<script type="text/javascript">
-		alert("click ok. i dare u.")
-		alert("i'm kidding this is just my journal")
-		alert("or is it??")
-		alert("it is- but beware its very much under construction")
+		// alert("click ok. i dare u.")
+		//alert("i'm kidding this is just my journal")
+		//alert("or is it??")
+		//alert("it is- but beware its very much under construction")
 	</script>
 
 <div id="menu">
 	<a href="file:///Users/c26os/Desktop/c26os.github.io.html/projects.html">projects</a>
 	<br>
-	<br>
+	<br>    
 	<a href="file:///Users/c26os/Desktop/c26os.github.io.html/journal.html">journal</a>
 </div>
 
-<section id="first-page">
-	<div id="text-box"><p>10.22.2022, an ungodly hour at night: Hi this is my first journal entry and I'm honeslty doing better. I don't totally understand what I'm doing yet, but sitting down for an hour and focusing on this has been a great help in itself. So far I've coded the basics; a title, a menu with hrefs, and this journal page. I'm excited to continue updating this digital journal with my progress and see it grow!</p></div>
-</section>
+<div id="parent-div">
+<section id="first-page" >
+		<div class="text-box"><p>10.22.2022, an ungodly hour at night: Hi this is my first journal entry and I'm honeslty doing better. I don't totally understand what I'm doing yet, but sitting down for an hour and focusing on this has been a great help in itself. So far I've coded the basics; a title, a menu with hrefs, and this journal page. I'm excited to continue updating this digital journal with my progress and see it grow!</p></div></section>
 
-<section id="second-page">
-<div id="text-box"><p>10.25.2022 OOOOOH! Today I looked up how to code glowing text in CSS and it took awhile but was totally worth it. I'm confused on how I exactly animated it, but it does that too which is great. I just followed the video and fiddled around with it.</p></div>
-</section>
 
-<section id="third-page">
-<div id="text-box"><p>10.27.2022 
-		 So techincally this website isn't pushed yet, because of issues with my terminal, so I'm writing in this digital notebook to myself like a crazy person. I developed the journal page a bit more but didn't have time to polish it or add anything fancy. Just made a menu bar and once again, befuddled, followed Molly's video. I don't understand the whole concept of sections yet. Oh well.  
-	</p></div></section>
+	<section id="second-page">
+	<div class="text-box"><p>10.25.2022 OOOOOH! Today I looked up how to code glowing text in CSS and it took awhile but was totally worth it. I'm confused on how I exactly animated it, but it does that too which is great. I just followed the video and fiddled around with it.</p></div>
+	</section>
 
-	
-<!-- (disclaimer- this journal page is under construction- i repeat this journal page is an unpolished disaster. will be working on over the weekend) OOOOOH! Today I looked up how to code glowing text in CSS and it took awhile but was totally worth it. I'm confused on how I exactly animated it, but it does that too which is great. I just followed the video and fiddled around with it.  -->
-
-		 <section id="fourth-page"><div id="text-box"><p>
-			11.07.2022 8:52AM
-			What is an event listener? What is an event? How do you get "into" console.log and the different "attributes" of an Event? An event listener is ()
-			Using () one can get "into" console.log and the different "attributes" of an Event?
-
-	explain (client.x, client.y)   
-	
+	<section id="third-page">
+	<div class="text-box"><p>10.27.2022 
+			 So techincally this website isn't pushed yet, because of issues with my terminal, so I'm writing in this digital notebook to myself like a crazy person. I developed the journal page a bit more but didn't have time to polish it or add anything fancy. Just made a menu bar and once again, befuddled, followed Molly's video. I don't understand the whole concept of sections yet. Oh well.  
 		</p></div></section>
 
+		
+	<!-- (disclaimer- this journal page is under construction- i repeat this journal page is an unpolished disaster. will be working on over the weekend) OOOOOH! Today I looked up how to code glowing text in CSS and it took awhile but was totally worth it. I'm confused on how I exactly animated it, but it does that too which is great. I just followed the video and fiddled around with it.  -->
+
+			 <section id="fourth-page"><div class="text-box"><p>
+				11.07.2022 8:52AM
+				What is an event listener? What is an event? How do you get "into" console.log and the different "attributes" of an Event? An event listener is ()
+				Using () one can get "into" console.log and the different "attributes" of an Event?
+
+		explain (client.x, client.y)   </p></div></section>
+		<section id="third-page">
+	<div class="text-box"><p>10.27.2022 
+			 So techincally this website isn't pushed yet, because of issues with my terminal, so I'm writing in this digital notebook to myself like a crazy person. I developed the journal page a bit more but didn't have time to polish it or add anything fancy. Just made a menu bar and once again, befuddled, followed Molly's video. I don't understand the whole concept of sections yet. Oh well.  
+		</p></div></section>
+
+</div>
 </body>
 </html>
