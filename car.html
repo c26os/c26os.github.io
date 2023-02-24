@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title></title>
+	<style>
+		#duck{
+			width:100px;
+			height:100px;
+			background-color:blue;
+			left:10px;
+			position:absolute;
+			background-image:url(duck.jpeg);
+		background-size: cover;
+		background-repeat: no-repeat;
+		}
+
+		body{
+			background-image:url(lemonadestand.jpeg) ;
+			background-color: blue;
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+	</style>
+</head>
+<body>
+
+	
+
+	<div id="duck"></div>
+
+
+	<script type="text/javascript">
+
+		//sets x to 0 
+
+		duck.style.left = "0px";
+
+		 var x = parseInt(duck.style.left); //0
+
+		//add event listener to listen for key press 
+		 document.addEventListener("keydown", function(event){
+			console.log(x)
+			x = x+10;
+
+			//makes div move 10 (plus x)
+
+			duck.style.left = x +"px";
+
+
+			//document.addEventListener("keypress", function(event)
+				//	{console.log(event.keyCode)
+					//	if (event.keyCode==39){
+			
+						//}
+						//else if(event.keyCode==37){
+
+						//}
+			})
+
+
+	</script>
+
+</body>
+</html>
