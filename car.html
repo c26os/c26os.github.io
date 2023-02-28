@@ -26,7 +26,6 @@
 </head>
 <body>
 
-	
 
 	<div id="duck"></div>
 
@@ -48,18 +47,20 @@
 
 			duck.style.left = x +"px";
 
+			duck.style.left = "0px";
+			 var x = parseInt(duck.style.left);
+			document.addEventListener("keypress", function(event)
+					{console.log(x)
+					//(event.keyCode)
+					x=x+10;
 
-			//document.addEventListener("keypress", function(event)
-				//	{console.log(event.keyCode)
-					//	if (event.keyCode==39){
-			
-						//}
-						//else if(event.keyCode==37){
+						if (event.keyCode==39){
+							duck.style.left = x+ "px";
+						}
+						
 
-						//}
-			})
-
-
+						else if(event.keyCode==37){
+							duck.style.right = x+"px";}
 	</script>
 
 </body>
