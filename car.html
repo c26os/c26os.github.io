@@ -37,30 +37,36 @@
 		duck.style.left = "0px";
 
 		 var x = parseInt(duck.style.left); //0
+		 console.log("x", x)
 
-		//add event listener to listen for key press 
+		 //add event listener to listen for key press 
 		 document.addEventListener("keydown", function(event){
-			console.log(x)
+			console.log("x in event listener", x)
 			x = x+10;
 
 			//makes div move 10 (plus x)
 
 			duck.style.left = x +"px";
 
-			duck.style.left = "0px";
-			 var x = parseInt(duck.style.left);
-			document.addEventListener("keypress", function(event)
-					{console.log(x)
-					(event.keyCode)
+			//duck.style.left = "0px";
+
+		});
+
+		document.addEventListener("keypress", function(event){
+			console.log("event.keyCode", event.keyCode)
+			console.log("x" , x)
 					x=x+10;
 
 						if (event.keyCode==39){
+							console.log("here")
 							duck.style.left = x+ "px";
 						}
 						
 
 						else if(event.keyCode==37){
-							duck.style.right = x+"px";}
+							duck.style.right = x+"px";
+						}
+		})
 	</script>
 
 </body>

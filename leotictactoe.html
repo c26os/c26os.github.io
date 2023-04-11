@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title>tictactoe!</title>
+	<style>
+
+		.even{}
+
+		#container {
+			font-size:6px;
+			position:absolute;
+			height:460px;
+			width:455px;
+			top:10vh;
+			border:solid black 3px;
+			left:30vw;
+			display: flex;
+			flex-wrap: wrap;
+		}
+	</style>
+</head>
+<body>
+	<center><h1>Welcome to my TicTacToe Game!</h1></center>
+	<div id="container"></div>
+
+	<script>
+
+		var swit;
+		var box1backimg;
+		var person=0
+		function makeSquareContained (x){
+			var square = document.createElement("div");
+			container.appendChild(square);
+			square.classList.add("containerboxes");
+			
+			square.id = "box"+x;
+			square.style.display="inline-block";	
+			square.style.position= "relative";
+			square.style.opacity="1";
+			square.style.zIndex="5";
+			square.classList.add("Even")
+			square.style.height= "150px";
+			square.style.width= "150px";
+			square.style.border= "dotted grey 0.5px";
+			square.style.margin= "0px";
+			// square.style.margin-bottom= "0px";
+			square.style.display= "flex";
+			square.style.padding= "0px";
+			square.style.width= "33%";
+			square.style.backgroundSize="contain";
+
+			square.addEventListener("click",function assignPic(event){
+				person=person+1
+				console.log(person, "person")
+				if(person%2==0){
+					square.style.backgroundImage="url(x.png)"
+
+				}
+				if(person%2==1){
+					console.log("inodd")
+					square.style.backgroundImage="url(o.png)"
+
+				}
+
+
+			})
+		}
+		 if (var i=1; i<10; i=i+1) {
+			makeSquareContained(i)
+		}
+
+		container.addEventListener("click", function keepChecking(event){
+
+	// if(box1.style.backgroundImage=="url(o.png)"){
+	//console.log("this works")
+	//}
+
+			if(swit==true){
+				console.log("this works")
+
+			}
+			if(box1.classList=="containerboxes"){
+				console.log("uwu")
+			}
+		})
+//if(box1.backgroundImage==box2.backgroundImage && box1.backgroundImage==box3.backgroundImage){
+	//console.log("Same")
+//	if(box1.backgroundImage=="url(o.png)"){
+
+	//	alert("O won!")
+ 	//}
+ 	//if(box1.backgroundImage=="url(x.png)"){ 
+ 	//	alert("X won!")
+ ///	}
+
+
+
+	</script>
+</body>
+</html>
+

@@ -3,88 +3,110 @@
 <head>
 	
 	<title></title>
-<style type="text/css">
-	#picture{
-/*		top:-12px;*/
-	width:100%;
-	height:1000px;
-	background-position:center;
-	backgroun d-color: hotpink;
-	background-image:url(galentine.png);
-	background-size: cover;
-	z-index: 0;
-	position:fixed;
-	background-repeat: no-repeat;
-	
-	}
+	<style>
+	.even{
 
-#happy{
-background-color: red;
-width: 200px;
-height: ;
-}
-
-	body{
-		margin:0px;
-	}
-
-.hearts{
-width:100px;
-height:80px;
-display:inline-block;
-z-index:1;
-margin:0px;
-font-size:0px;
-background-image:url(heartdiv.png);
-background-size: contain;
-background-position:center;
-background-repeat:no-repeat;
-}
-
-.morehearts{
-width:100px;
-height:100px;
-display:inline-block;
-z-index: 1;
-font-size:0px;
-background-image:url(heartdiv.png);
-background-size: cover;	
-
-}
-
-
+			#container{
+/*			font-size:0px;*/
+			position:absolute;
+			height:460px;
+			width:455px;
+			top:10vh;
+			border:solid black 3px;
+			left:30vw;
+		}
 	</style>
-
 </head>
 <body>
-	<div id="picture"></div>
+<center><h1>Welcome to my TicTacToe Game!</h1></center>
+<div id="container"></div>
 
 
 
-<script type="text/javascript">
-	function  makeHeart(){
-	var heart =document.createElement("div");
-	document.getElementById("picture").appendChild(heart);
-	heart.classList.add("hearts");
-	heart.addEventListener("mouseover", function (){
-		heart.style.opacity=0;
-	})
+<script>
+
+	var swit;
+	var box1backimg;
+var person=0
+	function makeSquareContained (x){
+	var square = document.createElement("div");
+			container.appendChild(square);
+			square.classList.add("containerboxes");
+			
+			square.id = "box"+x;
+			square.style.display="inline-block";
+			
+			
+square.style.position= "relative"
+square.style.opacity="1"
+			square.style.zIndex="5"
+			// square.classList.add("Even")
+square.style.height= "150px"
+Square.style.width= "150px"
+Square.style.border= "dotted grey 0.5px"
+Square.style.margin= "0px"
+square.style.margin-bottom= "0px"
+	square.style.display= "flex"
+square.style.padding= "0px"
 
 
+
+			square.addEventListener("click",function assignPic(event){
+				person=person+1
+				if(person%2==0 && person){
+					square.style.backgroundImage="url(x.png)"
+
+				}
+				if(person%2==1){
+					square.style.backgroundImage="url(o.png)"
+					
+
+
+
+				}
+				
+			})
+	
 }
 
-for(var i=1;i<309;i=i+1)
-	{makeHeart()}
+for (var i=1; i<10; i=i+1){
+	makeSquareContained(i)}
+
+container.addEventListener("click", function keepChecking(event){
+
+	// if(box1.style.backgroundImage=="url(o.png)"){
+	// 	console.log("this works")
+	// }
+
+	if(swit==true){
+		console.log("this works")
+
+	}
+	if(box1.classList=="containerboxes"){
+		console.log("uwu")
+	}
+	
+})
+// if(box1.backgroundImage==box2.backgroundImage && box1.backgroundImage==box3.backgroundImage){
+
+// 	console.log("Same")
+// 	if(box1.backgroundImage=="url(o.png)"){
+
+// 		alert("O won!")
+// 	}
+// 	if(box1.backgroundImage=="url(x.png)"){
+// 		alert("X won!")
+// 	}
+	
+// }
+
+
+
+
 
 
 
 </script>
-
 </body>
 </html>
 
-<!-- steps 
-set picture of friends as z-index:0; or background image
-make a bunch of heart divs (with z-index:1)
-addEventListener for hover over heart-shape divs
-change z-index to 0 upon hover- therefore revealing image -->

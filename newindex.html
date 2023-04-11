@@ -8,49 +8,63 @@
 
 	<style type="text/css">
 
-		#letters{
-		font-family: arial;
-		font-size: 50px;
-		background-color: blanchedalmond;
-		width: 100px;
-		height: 100px;
+		.letters{
+		/*font-family: arial;
+		font-size: 50px;*/
+			background-color: blanchedalmond;
+			width: 100px;
+			height: 100px;
 		}
-</style>
+	</style>
 </head>
 <body>
-	<div class="movingText"></div>
-<script type="text/javascript">
-    
-    function makeLetters (x) {
+	<center>
+	<div class="letters"></div>
+	</center>
+	<script type="text/javascript">
 
-            var letters = document.createElement('div');
-                        document.body.appendChild(letters);
+		function makeLetters () {
 
-		//	letters.classList.add("movingText");
-            letters.style.width = "200px";
-            letters.style.height = "200px";
-            letters.style.display = "inline-block";
-          letters.style.margin = "10px";
-           letters.style.backgroundRepeat = "no-repeat";
-          //  letters.style.border = "1px";
-            letters.style.backgroundColor = "beige";
+			var letters = document.createElement('div');
+			document.body.appendChild(letters);
+
+			letters.classList.add("movingText");
+			letters.style.width = "200px";
+			letters.style.height = "200px";
+			letters.style.display = "inline-block";
+			letters.style.margin = "10px";
+			letters.style.backgroundRepeat = "no-repeat";
+			letters.style.border = "1px";
+			letters.style.backgroundColor = "beige";
 			letters.style.backgroundSize = "contain";
-           letters.innerText=letters[random_number];
-            	letters.innerText=x;
+			letters.style.fontSize="30px";
+			letters.style.font="arial";
+			letters.innerText=letters[randomNumbers];
+			//letters.innerText=x;
 
+				var randomNumbers = Math.round(Math.random()*26);
+				randomLetters = letters[randomNumbers];
+				makeLetters(randomLetters);
+				
+				makeLetters()
+			}
 
-var letters =["a", "b", "c", "d", "e", "f",
-"g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u","v", "w", "x", "y", "z",]
+var letters =["a", "b", "c", "d", "e", "f","g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u","v", "w", "x", "y", "z",]
 
-    for (var i = 0; i < 27; i=i+1) 
-    { 
-		random_numbers=Math.round(Math.random()*2);
-    	console.log(random_number);
-    	random_letters = letters[random_numbers];
-    	makeLetters(random_letters);
-    }
-}
-</script>
+			//for (var i = 0; i < 27; i=i+1) 
+				//{makeLetters()}
+				//makeLetters()
+	//}
+
+		//var randomNumbers(){
+				//randomNumbers=Math.round(Math.random()*26);
+				//randomLetters = letters[randomNumbers];
+				//makeLetters(randomLetters);
+				
+			//}
+			makeLetters()
+	
+	</script>
 	
 </body>
 </html>

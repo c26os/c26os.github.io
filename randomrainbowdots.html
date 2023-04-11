@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	
+
+	function dots(){
+			var thing = document.createElement("dots");
+			document.body.appendChild("dot");
+			thing.classList.add("thing");
+
+			function randomPosition(){
+				thing.style.left= Math.random()*800+"px";
+				thing.style.top= Math.random()*500+"px";
+			}
+
+			setInterval(randomPosition, 500)
+		} 
+		for(var i=0; i<100; i=i+1){
+			thing()
+
+		}
+</script>
+</body>
+</html>

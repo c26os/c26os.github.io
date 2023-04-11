@@ -6,25 +6,6 @@
 
 <style type="text/css">
 
-.projects{
-font-family:times;
-border-color: violet;
-border: thick;
-height: 100px;
-width: 20%;
-z-index: 1;
-font-size: 10px;
-background-color: wheat;
-color: blueviolet;
-margin-left: 5px;
-margin-right: 5px;
-margin-top: 5px;
-margin-bottom: 5px;
-display: inline-block;
-flex-direction:row;
-flex-wrap: wrap;
-}
-
 body{
 margin:0;
 background-color: violet;
@@ -35,38 +16,72 @@ background-color: violet;
 </head>
 <body>
 
-	<div class="projects"> 
+	<div class="button"> 
 
 <a href="leo.html">holiday spirit</a>
 </div>
-
-<div class ="projects">
+<div class ="button">
 <a href="digitalgift.html">breakfast</a>
 </div>
-<div class="projects"> 
+<div class="button"> 
 <a href="code2.html">always watching</a>
 </div>
 
-<div class="projects">
+<div class="button">
 <a href="momo.html">cute and not scary images</a>
 </div>
 
-<div class="projects">
+<div class="button">
 <a href="halloween.html">square can find u wherever u r</a>
 
 </div>
 
-<div class="projects">
+<div class="button">
 <a href="sun.html">here it comes!!!</a>
 </div>
 
-<div class="projects">
+<div class="button">
 <a href="galentine.html">HEART EYES</a>
 </div>
 
-<div class="projects">
+<div class="button">
 <a href="car.html">car</a>
 </div>
+
+<script type="text/javascript">
+	var buttons = document.createElement("div");
+			document.body.appendChild(buttons);
+			buttons.classList.add("button");
+			font-family:copperplate;
+buttons.style.borderColor= "violet";
+buttons.style.border= "groove";
+buttons.style.border= "thick";
+buttons.style.height= "100px";
+buttons.style.zIndex= "1";
+buttons.style.fontSize= "50px";
+buttons.style.backgroundColor= "whitesmoke";
+buttons.style.backgroundImage= ;
+buttons.style.color= "blueviolet";
+buttons.style.marginLeft: "5px";
+buttons.style.marginRight= "5px";
+buttons.style.marginTop= "5px";
+buttons.style.marginBottom= "5px";
+buttons.style.display= "inline-block";
+buttons.style.flexDirection="row";
+buttons.style.flexWrap= "wrap";
+buttons.style.borderRadius: "50%";
+
+function randomPosition (){
+			buttons.style.top= Math.random()*300+"px"
+			buttons.style.left= Math.random()*200+"px"
+			buttons.style.position= "relative";
+			buttons.style.width= 70+Math.random() + "px"
+			buttons.style.height= parseInt(buttons.style.width) + "px"
+
+		}
+randomPosition()
+</script>
+
 
 </body>
 </html>

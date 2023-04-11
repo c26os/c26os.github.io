@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title></title>
+
+	<style type="text/css">
+		.thing{
+		width:100px;
+		height:100px;
+		background-image:url(spider.png);
+		background-size:contain;
+		background-repeat: no-repeat;
+/*		position: absolute;*/
+}
+	</style>
+</head>
+<body>
+<script type="text/javascript">
+	 function thing(){
+	 		var thing = document.createElement("div");
+	 		document.body.appendChild(thing);
+	 		thing.classList.add("thing");
+	
+	function randomPosition(){
+	 	thing.style.left= Math.random()*800+"px";
+	 	thing.style.top= Math.random()*500+"px";
+	 }
+	 setInterval(randomPosition, 500)
+
+		} 
+for(var i=0; i<100; i=i+1){
+thing()
+
+	}
+	
+
+</script>
+</body>
+</html>
