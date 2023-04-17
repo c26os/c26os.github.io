@@ -7,18 +7,18 @@
 
 	<style type="text/css">
 		.dots {
-width: 100vw;
-height: 100vw;
+			width: 100vw;
+			height: 100vw;
 
 
 		}
 	</style>
 
-A FEW THINGS TO DO:
--CREATE EVENT LISTENER FOR MOUSE
--make it fit the screen normally (not let dots come off of screen, no scrolling)
--RELATIVE DISTANCE (?)
--FIX GIANT DOT GLITCH (AT BEGGINING)
+	A FEW THINGS TO DO:
+	-CREATE EVENT LISTENER FOR MOUSE
+	-make it fit the screen normally (not let dots come off of screen, no scrolling)
+	-RELATIVE DISTANCE (?)
+	-FIX GIANT DOT GLITCH (AT BEGGINING)
 
 
 </head>
@@ -31,9 +31,15 @@ A FEW THINGS TO DO:
 			var newDot = document.createElement("div");
 			document.body.appendChild(newDot);
 			newDot.classList.add("dots");
-			//newDot.addEventListener("click",function (){
+			newDot.addEventListener("mouseover",function (e){
+				x=e.clientX
+				y=e.clientY
+				console.log (x, y)
+
+
+			})
 			newDot.style.borderRadius="50%"; 
-   
+
 			//function randomColor (){
 			var r = Math.round(255*Math.random())
 			var g = Math.round(255*Math.random())
@@ -41,40 +47,41 @@ A FEW THINGS TO DO:
 			newDot.style.backgroundColor= "rgb("+ r + ","+ g + "," + b + ")"
 
 			function randomPosition (){
-			newDot.style.top= Math.random()*300+"px"
-			newDot.style.left= Math.random()*200+"px"
-			newDot.style.position= "relative";
-			newDot.style.width= Math.random()*70 + "px"
-			newDot.style.height= parseInt(newDot.style.width) + "px"}
+				newDot.style.top= Math.random()*300+"px"
+				newDot.style.left= Math.random()*200+"px"
+				newDot.style.position= "relative";
+				newDot.style.width= Math.random()*70 + "px"
+				newDot.style.height= parseInt(newDot.style.width) + "px"
+			}
 
-function randomColor (){
-var r = Math.round(255*Math.random())
-			var g = Math.round(255*Math.random())
-			var b = Math.round(255*Math.random())
-			newDot.style.backgroundColor= "rgb("+ r + ","+ g + "," + b + ")"}
+				function randomColor (){
+					var r = Math.round(255*Math.random())
+					var g = Math.round(255*Math.random())
+					var b = Math.round(255*Math.random())
+					newDot.style.backgroundColor= "rgb("+ r + ","+ g + "," + b + ")"}
 
-	setInterval(randomPosition, 300)
-	setInterval(randomColor, 300)
-	}
+					setInterval(randomPosition, 300)
+					setInterval(randomColor, 300)
+				}
 
 		//)
-			
-			
-			
+
+
+
 //add event listener
-			
-			
-			
+
+
+
 		//} 
 
-		for(var i=0; i<100; i=i+1){
-			dots()
+				for(var i=0; i<100; i=i+1){
+					dots()
 
-		}
+				}
 
-		
+
 
 		//}
-	</script>
-</body>
-</html>
+			</script>
+		</body>
+		</html>
